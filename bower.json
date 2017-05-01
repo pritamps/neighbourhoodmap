@@ -1,0 +1,6 @@
+{
+  "name": "neighbourhood_map",
+  "dependencies": {
+    "knockout": "knockoutjs#^3.4.2"
+  }
+}
