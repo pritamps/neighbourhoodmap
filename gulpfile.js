@@ -8,7 +8,10 @@ var rename = require('gulp-rename');
 
  // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src(['bower_components/knockout/dist/knockout.js', 'src/js/*.js'])
+    return gulp.src(['bower_components/knockout/dist/knockout.js', 
+                     'bower_components/jquery/dist/jquery.js',
+                     'src/js/*.js'
+                     ])
       .pipe(concat('main.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
