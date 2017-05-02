@@ -14,15 +14,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" href="css/main.css" rel="stylesheet">
 
-  <style>
-    #map {
-      height: 400px;
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body>
+
+  <ul class="topnav">
+    <li>
+      <div class="container" onclick="openNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </li>
+  </ul>
+
   <h3>My Google Maps Demo</h3>
 
   <p>First name: <strong data-bind="text: firstName"></strong></p>
@@ -32,21 +37,24 @@
   <p>Last name: <input data-bind="value: lastName" /></p>
 
 
-  <div class="mobile-nav">
-    <div class="menu-btn" id="menu-btn">
-      <div></div>
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
 
-    <div class="responsive-menu">
-      <ul>
-        <li>1. Object</li>
-        <li>2. Object</li>
-      </ul>
-    </div>
   </div>
+
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <p>Click on the Menu Icon to transform it to "X":</p>
   <div id="map"></div>
 
   <script>
