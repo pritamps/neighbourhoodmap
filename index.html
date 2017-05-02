@@ -12,6 +12,12 @@
 
 <body>
   <h3>My Google Maps Demo</h3>
+
+  <p>First name: <strong data-bind="text: firstName"></strong></p>
+  <p>Last name: <strong data-bind="text: lastName"></strong></p>
+
+  <p>First name: <input data-bind="value: firstName" /></p>
+  <p>Last name: <input data-bind="value: lastName" /></p>
   <div id="map"></div>
   <script>
     function initMap() {
@@ -31,6 +37,7 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBER7hnGpBhb09QtZ2rE8Em6oJc9opBqoE&callback=initMap">
   </script>
+  <script type='text/javascript' src='build/js/main.min.js'></script>
 </body>
 
 </html>

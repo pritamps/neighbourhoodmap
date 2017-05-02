@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 
  // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src(['bower_components/knockout/dist/knockout.js', 'src/js/*.js'])
       .pipe(concat('main.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
@@ -18,7 +18,7 @@ gulp.task('scripts', function() {
 // Watch for changes in files
 gulp.task('watch', function() {
    // Watch .js files
-  gulp.watch(src + 'js/*.js', ['scripts']);
+  gulp.watch('src/js/*.js', ['scripts']);
  });
 
  // Default Task
