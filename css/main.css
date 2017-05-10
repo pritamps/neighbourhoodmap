@@ -1,17 +1,42 @@
 /* The Overlay (background) */
 
+
 /* all map containers must be full height */
-html, body, .container-full, .row-offcanvas .row-offcanvas-left, .page-container, .row, .map, .map_canvas { height: 100%; }
+
+html,
+body,
+.container-full,
+.row-offcanvas .row-offcanvas-left,
+.page-container,
+.row,
+.map,
+.map_canvas {
+  height: 100%;
+}
 
 .nopadding {
-   padding: 0px;
-   margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #map_canvas {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    bottom: 0px;
-    right: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  bottom: 0px;
+  right: 0;
+}
+
+#over_map {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  left: 10px;
+  z-index: 99;
+  background-color: #FFFFFF;
+  border: 2px;
+  width:300px;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 5px 10px 10px 5px;
+
 }
