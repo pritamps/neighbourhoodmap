@@ -16,9 +16,16 @@
 </head>
 
 <body>
-  <div id="over_map">
+  <div id="filter_box">
     <p>First name: <strong data-bind="text: firstName"></strong></p>
-    <p>Last name: <strong data-bind="text: lastName"></strong></p>  </div>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+  </div>
+
+  <div id="toggle_button">
+    <button>Hide Sidebar</button>
+  </div>
+
+
   <div class="google-map-canvas nopadding" id="map_canvas"></div>
   <script>
     function initMap() {

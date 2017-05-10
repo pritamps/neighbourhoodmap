@@ -1,25 +1,22 @@
 // This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
+var toggled = true;
+
 function AppViewModel() {
     this.firstName = ko.observable("Bert");
     this.lastName = ko.observable("Bertington");
 }
 
-// Overlay menu open/close
-/* Open when someone clicks on the span element */
-function openNav(x) {
-    document.getElementById("myNav").style.width = "20%";
-    // x.classList.toggle("change");
-}
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
-
-$(document).ready(function() {
-  $('[data-toggle=offcanvas]').click(function() {
-    $('.row-offcanvas').toggleClass('active');
-  });
+$("#toggle_button").click(function() { 
+    // assumes element with id='button'
+    if (toggled == true) {
+        $("#filter_box").animate({"left": "-=300px", "opacity":1}, "slow");
+        $('#toggle_button').animate({"left": "-=300px", "opacity":1}, "slow");
+    }
+    else {
+        $("#filter_box").animate({"left": "+=300px", "opacity":1}, "slow");
+        $('#toggle_button').animate({"left": "+=300px", "opacity":1}, "slow");
+    }
+    toggled = !toggled;
 });
 
 // Activates knockout.js
