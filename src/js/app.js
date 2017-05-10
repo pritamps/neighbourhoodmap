@@ -16,5 +16,11 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
+
 // Activates knockout.js
 ko.applyBindings(new AppViewModel());

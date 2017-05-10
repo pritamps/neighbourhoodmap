@@ -10,6 +10,7 @@ var rename = require('gulp-rename');
 gulp.task('scripts', function() {
     return gulp.src(['bower_components/knockout/dist/knockout.js', 
                      'bower_components/jquery/dist/jquery.js',
+                     'bower_components/bootstrap/dist/js/bootstrap.js',
                      'src/js/*.js'
                      ])
       .pipe(concat('main.js'))
