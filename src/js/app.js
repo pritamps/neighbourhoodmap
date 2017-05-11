@@ -1,23 +1,36 @@
 // This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
-var toggled = true;
+var toggled = false;
 
 function AppViewModel() {
     this.firstName = ko.observable("Bert");
     this.lastName = ko.observable("Bertington");
 }
 
-$("#toggle_button").click(function() { 
+$("#toggle_button").click(function () {
     // assumes element with id='button'
-    if (toggled == true) {
-        $("#filter_box").animate({"left": "-=300px", "opacity":1}, "slow");
-        $('#toggle_button').animate({"left": "-=300px", "opacity":1}, "slow");
-    }
-    else {
-        $("#filter_box").animate({"left": "+=300px", "opacity":1}, "slow");
-        $('#toggle_button').animate({"left": "+=300px", "opacity":1}, "slow");
+    if (toggled == false) {
+        $("#filter_box").animate({
+            "left": "-=300px",
+            "opacity": 1
+        }, "slow");
+        $('#toggle_button').animate({
+            "left": "-=300px",
+            "opacity": 1
+        }, "slow");
+        $('#toggle_arrow').removeClass("left").addClass("right")
+
+    } else {
+        $("#filter_box").animate({
+            "left": "+=300px",
+            "opacity": 1
+        }, "slow");
+        $('#toggle_button').animate({
+            "left": "+=300px",
+            "opacity": 1
+        }, "slow");
+        $('#toggle_arrow').removeClass("right").addClass("left")
     }
     toggled = !toggled;
 });
-
 // Activates knockout.js
 ko.applyBindings(new AppViewModel());
