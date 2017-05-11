@@ -9,25 +9,25 @@ function AppViewModel() {
 $("#toggle_button").click(function () {
     // assumes element with id='button'
     if (toggled == false) {
-        $("#filter_box").animate({
+        $("#sidebar-wrapper").animate({
             "left": "-=300px",
             "opacity": 1
         }, "slow");
-        $('#toggle_button').animate({
-            "left": "-=300px",
-            "opacity": 1
-        }, "slow");
+        // $('#toggle_button').animate({
+        //     "left": "-=300px",
+        //     "opacity": 1
+        // }, "slow");
         $('#toggle_arrow').removeClass("left").addClass("right")
 
     } else {
-        $("#filter_box").animate({
+        $("#sidebar-wrapper").animate({
             "left": "+=300px",
             "opacity": 1
         }, "slow");
-        $('#toggle_button').animate({
-            "left": "+=300px",
-            "opacity": 1
-        }, "slow");
+        // $('#toggle_button').animate({
+        //     "left": "+=300px",
+        //     "opacity": 1
+        // }, "slow");
         $('#toggle_arrow').removeClass("right").addClass("left")
     }
     toggled = !toggled;
