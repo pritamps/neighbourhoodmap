@@ -13,10 +13,6 @@ $("#toggle_button").click(function () {
             "left": "-=300px",
             "opacity": 1
         }, "slow");
-        // $('#toggle_button').animate({
-        //     "left": "-=300px",
-        //     "opacity": 1
-        // }, "slow");
         $('#toggle_arrow').removeClass("left").addClass("right")
 
     } else {
@@ -24,10 +20,6 @@ $("#toggle_button").click(function () {
             "left": "+=300px",
             "opacity": 1
         }, "slow");
-        // $('#toggle_button').animate({
-        //     "left": "+=300px",
-        //     "opacity": 1
-        // }, "slow");
         $('#toggle_arrow').removeClass("right").addClass("left")
     }
     toggled = !toggled;
