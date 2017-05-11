@@ -3,10 +3,11 @@
 This webapp lists some nice places to eat around my house. I developed this as part of
 Udacity's Fullstack Nanodegree. High-level skills used here are:
 
-1. Javascript
-2. Google Maps API
-3. KnockoutJS and the MVVM design pattern
+1. Javascript along with jQuery and AJAX
+2. The Google Maps API
+3. The MVVM design pattern through KnockoutJS
 4. Basic HTML and CSS with Bootstrap
+5. Tools for web development: Gulp, Bower, NPM. Cool stuff
 
 ## Useful links I referred to while making this
 
