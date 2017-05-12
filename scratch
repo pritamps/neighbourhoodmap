@@ -1,1 +1,4 @@
 ZOMATO API KEY: 8b76aaae3b80cca4284fac57a0f448ce
+
+ZOMATO NEARBY SEARCH API CALL: 
+curl -X GET --header "Accept: application/json" --header "user-key: 8b76aaae3b80cca4284fac57a0f448ce" "https://developers.zomato.com/api/v2.1/search?lat=12.942028&lon=77.5876644&establishment_type=restaurant"
